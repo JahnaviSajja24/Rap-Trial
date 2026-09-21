@@ -1,0 +1,24 @@
+managed implementation in class zbp_j9730_r_travel unique;
+strict ( 2 );
+
+define behavior for ZJ9730_R_TRAVEL alias Travel
+persistent table zj9730_travel
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) AgencyId, TravelId;
+  mapping for ZJ9730_travel corresponding
+    {
+      AgencyID    = agency_id;
+      TravelID    = travel_id;
+      CustomerID  = customer_id;
+      BeginDate   = begin_date;
+      EndDate     = end_date;
+      ChangedAt   = changed_at;
+      ChangedBy   = changed_by;
+    }
+}

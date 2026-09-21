@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service ZJ9730_TRAVEL {
+  expose ZJ9730_C_TRAVEL;
+}
